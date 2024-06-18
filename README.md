@@ -3,10 +3,16 @@
 This is a simple API that returns a list of posts. The API is implemented using Node.JS and Redis is used for caching the response. The API is deployed on Render.
 
 ## API Endpoints
-/api/posts
-/api/posts/:id
+
+- /api/posts
+- /api/posts/:id
+
+## Live Version
+
+- availble on [Render](https://simple-api-w-redis-caching.onrender.com/api/posts)
 
 ## How to run the API
+
 - Clone the repository
 - Run `npm install`
 - Install Redis on your local machine
@@ -18,6 +24,7 @@ This is a simple API that returns a list of posts. The API is implemented using 
 - The API will be running on `http://localhost:3000`
 
 ## Packages
+
 - express
 - redis
 - axios
