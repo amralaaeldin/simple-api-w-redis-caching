@@ -8,7 +8,7 @@ import redisClient from "./../utils/redisClient.js";
 const router = Router();
 dotenv.config();
 
-router.get("/posts", cacheMiddleware, async (req, res) => {
+router.get("/", cacheMiddleware, async (req, res) => {
   const response = await axios.get(
     "https://jsonplaceholder.typicode.com/posts"
   );
@@ -20,7 +20,7 @@ router.get("/posts", cacheMiddleware, async (req, res) => {
   return res.json(posts);
 });
 
-router.get("/posts/:id", cacheMiddleware, async (req, res) => {
+router.get("/:id", cacheMiddleware, async (req, res) => {
   const { id } = req.params;
   const response = await axios.get(
     `https://jsonplaceholder.typicode.com/posts/${id}`
